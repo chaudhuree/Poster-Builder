@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poster Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div
+      class="container mx-auto p-4 my-8 flex h-full grid gap-8 grid-cols-12 min-h-[85vh] w-full"
+    >
+      <!-- Left Panel: Components -->
+      <div
+        class="col-span-12 !bg-[#f3f4f6] md:col-span-6 bg-white p-4 rounded-lg shadow-md border border-gray-300"
+        style="border-style: dashed solid"
+      >
+        <h2
+          class="text-2xl font-semibold mx-auto -translate-y-[40px] space-x-2 mb-4 bg-white py-4 px-2 w-[90%] rounded-lg text-center"
+        >
+          <i class="ri-box-3-fill text-xl mt-1"></i><span>Coponents</span>
+        </h2>
+        <div id="contentSections" class="space-y-4">
+          <!-- Content sections will be dynamically added here -->
+        </div>
+        <h4 class="text-center font-bold text-2xl">Items</h4>
+        <div
+          id="componentButtons"
+          class="grid items-center  gap-3 mx-auto mt-6 grid-cols-12"
+        >
+          <button
+            id="headingBtn"
+            class="btn my-3 col-span-4 bg-yellow-200 rounded-md py-2 font-semibold text-yellow-600 hover:text-black hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-black"
+          >
+            Heading
+          </button>
+          <button
+            id="imageBtn"
+            class="btn my-3 col-span-4 bg-green-200 rounded-md py-2 font-semibold text-green-600 hover:text-black hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-black"
+          >
+            Image
+          </button>
+          <button
+            id="descriptionBtn"
+            class="btn my-3 col-span-4 bg-blue-200 rounded-md py-2 font-semibold text-blue-600 hover:text-black hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-black"
+          >
+            Description
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Panel: Preview -->
+      <div
+        class="col-span-12 !bg-[#f3f4f6] md:col-span-6 bg-white p-4 rounded-lg shadow-md border border-gray-300 relative"
+        style="border-style: dashed solid"
+      >
+        <h2
+          class="text-2xl font-semibold mx-auto -translate-y-[40px] space-x-2 mb-4 bg-white py-4 px-2 w-[90%] rounded-lg text-center"
+        >
+          <i class="ri-file-image-fill"></i><span>Preview</span>
+        </h2>
+        <div id="previewPanel" class=" p-4 min-h-[400px]">
+          <h1 id="previewHeading" class="text-6xl font-semibold mb-4"></h1>
+          <img id="previewImage" class="mt-4 max-w-full h-[500px] rounded-lg hidden" src="" alt="" />
+          <p id="previewDescription" class="text-xl my-3 ml-1 h-auto"></p>
+        </div>
+        <button id="downloadBtn" class="absolute btn mt-4 bg-white !rounded-lg bottom-8 left-8">Download Poster</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
